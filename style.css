@@ -71,7 +71,7 @@ body {
   }
   
   .genre-button:hover {
-    background-color: #444;
+    background-color: transparent;
     transform: scale(1.05);
   }
   
