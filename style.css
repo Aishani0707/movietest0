@@ -62,7 +62,7 @@ body {
   
   .genre-button {
     padding: 20px 30px;
-    background-color: #383773;
+    background-color:transparent;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -71,7 +71,7 @@ body {
   }
   
   .genre-button:hover {
-    background-color: transparent;
+    background-color: #333  ;
     transform: scale(1.05);
   }
   
