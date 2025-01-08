@@ -75,10 +75,6 @@ async function showSuggestions(query) {
 }
 
 // Display movie details with trailer
-
-
-
-// Display recommendations by genre
 async function showMovieDetails(id) {
   const url = `${BASE_URL}&i=${id}`;
   const data = await fetchData(url);
@@ -113,6 +109,27 @@ async function showMovieDetails(id) {
   }
 }
 
+// Display recommendations by genre
+async function showRecommendations(genre) {
+  const url = `${BASE_URL}&s=${genre}`;
+  const data = await fetchData(url);
+
+  if (data && data.Search) {
+    recommendationsContainer.innerHTML = data.Search.map(movie => `
+      <div class="recommendation-item" data-id="${movie.imdbID}">
+        <img src="${movie.Poster}" alt="${movie.Title}">
+        <p>${movie.Title}</p>
+      </div>
+    `).join('');
+
+    // Add click event to recommendations
+    document.querySelectorAll('.recommendation-item').forEach(item => {
+      item.addEventListener('click', () => showMovieDetails(item.dataset.id));
+    });
+  } else {
+    recommendationsContainer.innerHTML = '<p>No recommendations found.</p>';
+  }
+}
 
 // Function to load initial recommendations for specific movies
 async function loadInitialRecommendations() {
