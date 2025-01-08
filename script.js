@@ -133,7 +133,7 @@ async function showRecommendations(genre) {
 
 // Function to load initial recommendations for specific movies
 async function loadInitialRecommendations() {
-  const movies = ['Dark', 'From', 'Incantation', 'Alice in Borderland', 'The Prestige', 'Oldboy', 'Squid Game' ,'Forrest Gump' ,'Parasite' ,'The sixth sense ', 'hereditary' ,'A quiet place' ,'Mouse' ,'La La Land' ,'500 days of summer']; // List of movies to load initially
+  const movies = ['Dark', 'From', 'Incantation', 'Alice in Borderland', 'The Prestige', 'Oldboy', 'Squid Game' ,'Forrest Gump' ,'Parasite' ,'The sixth sense ']; // List of movies to load initially
   const recommendations = [];
 
   // Fetch details for each movie
