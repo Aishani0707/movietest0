@@ -1,5 +1,5 @@
 const API_KEY = 'bf39cbff'; // Replace with your OMDB API key
-const YOUTUBE_API_KEY = 'AIzaSyDHv3KeyP_XZLTT0QMYLE83xJxsv14oMK4'; // Replace with your YouTube API key
+const YOUTUBE_API_KEY = 'AIzaSyCvcpgu5WUIyFQJf6bkSF1oegakqBkZP-A'; // Replace with your YouTube API key
 const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 const YOUTUBE_SEARCH_URL = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&type=video&key=${YOUTUBE_API_KEY}`;
 
